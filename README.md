@@ -1,39 +1,38 @@
-# HTML To PDF Renderer
+# HtmlToPDFRenderer Previewer
 
-This is a tool for rendering HTML with CSS to PDF. It is a web-based application that mimics the behavior of tools like `HtmlRenderer` and `PuppeteerSharp`.
+A web-based tool designed to mimic the behavior of HTML-to-PDF rendering libraries like PuppeteerSharp and HtmlRenderer.PDFSharp. This tool provides a real-time preview of how your HTML and CSS will be rendered as a PDF document (A4 size).
 
 ## Features
 
-- **HTML Rendering**: Renders HTML content with proper CSS styling.
-- **PDF Generation**: Converts the rendered HTML to PDF format.
-- **Web Interface**: Provides a user-friendly interface for uploading HTML/CSS files or entering HTML content directly.
+- **Real-time Preview**: See your HTML and CSS changes rendered instantly in an A4-proportioned iframe.
+- **Premium Code Editors**: Integrated Monaco Editors (the same editor that powers VS Code) for both HTML and CSS, featuring syntax highlighting and automatic formatting.
+- **Modern Interface**: A sleek, dark-mode design with glassmorphism elements, providing a distraction-free environment.
+
+## Getting Started
+
+To run this tool locally, follow these steps:
+
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+
+2.  **Start the Development Server**:
+    ```bash
+    npm run dev
+    ```
+
+3.  **Open in Browser**:
+    Navigate to the URL provided in the terminal (usually `http://localhost:5173`).
 
 ## Usage
 
-### Online Usage
+1.  **HTML Editor (Left Top)**: Enter your raw HTML structure here. It will be injected directly into the `<body>` of the preview.
+2.  **CSS Editor (Left Bottom)**: Enter your custom CSS styles here. They will be injected into a `<style>` block in the `<head>` of the preview.
+3.  **Preview Pane (Right)**: The preview will automatically update as you type. It maintains an A4 aspect ratio and scales down to fit your screen.
 
-You can use the tool directly via its web interface at: [https://cowinchan.github.io/HtmlToPDFRenderer/](https://cowinchan.github.io/HtmlToPDFRenderer/)
+## Technologies Used
 
-1.  Open the web page.
-2.  Choose to upload a `HTML` + `CSS` file or enter `HTML` content directly.
-3.  (Optional) Provide a custom PDF filename.
-4.  Click "Convert" to generate the PDF.
-5.  Download the resulting PDF file.
-
-### Local Development
-
-To run this project locally, you can use Python's built-in `http.server` module.
-
-1.  Navigate to the project directory in your terminal:
-    ```bash
-    cd path/to/HtmlToPDFRenderer
-    ```
-
-2.  Start the development server:
-    ```bash
-    python -m http.server 8000
-    ```
-
-3.  Open your web browser and go to:
-    -   [http://localhost:8000](http://localhost:8000) (Main interface)
-    -   [http://localhost:8000/api.html](http://localhost:8000/api.html) (API documentation)
+-   [React](https://reactjs.org/) (via [Vite](https://vitejs.dev/))
+-   [Monaco Editor](https://microsoft.github.io/monaco-editor/) via `@monaco-editor/react`
+-   Vanilla CSS for styling
